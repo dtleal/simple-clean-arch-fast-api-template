@@ -17,8 +17,11 @@ class FirstrExampleController():
     async def control(self, input_dto: FirstExampleInputDTO) -> FirstExampleOutputDTO:
         """"""
         input_port = FirstExampleInputPort(
-            _id = input_dto._id,
-            name = input_dto._id,
-            active = input_dto._id,
+            name = input_dto.name,
+            active = input_dto.active,
         )
-        return self._first_example_use_case(input_port=input_port)
+        use_case_output = await self._first_example_use_case(input_port=input_port)
+        return FirstExampleOutputDTO(
+            http_response_code=use_case_output.code,
+            http_response_body=use_case_output.body
+        )

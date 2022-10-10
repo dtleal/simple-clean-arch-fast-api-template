@@ -7,7 +7,6 @@ from typing import Optional, Dict, Any
 class FirstExampleInputPort:
     """"""
 
-    _id: str
     name: str
     active: Optional[bool]
 

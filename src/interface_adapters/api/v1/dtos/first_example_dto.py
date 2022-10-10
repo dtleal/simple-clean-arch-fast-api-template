@@ -4,8 +4,7 @@ from typing import Optional, Any, Dict
 
 
 class FirstExampleInputDTO(BaseModel):
-    
-    _id: str = Field(default=None)
+
     name: str = Field(default=None)
     active: Optional[bool] = Field(default=False)
 
