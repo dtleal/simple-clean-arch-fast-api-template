@@ -6,10 +6,10 @@ from domain.use_case.first_example.ports import FirstExampleInputPort
 
 
 class FirstrExampleController():
-    
+
     def __init__(
         self,
-        first_example_use_case: FirstExampleUseCase
+        first_example_use_case: FirstExampleUseCase,
     ) -> None:
         """"""
         self._first_example_use_case = first_example_use_case
